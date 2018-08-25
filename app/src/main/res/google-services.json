@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "610041799365",
+    "firebase_url": "https://mlkit-image-recognition.firebaseio.com",
+    "project_id": "mlkit-image-recognition",
+    "storage_bucket": "mlkit-image-recognition.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610041799365:android:78c67a39c760cbb9",
+        "android_client_info": {
+          "package_name": "com.projects.enzoftware.firebasemlkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610041799365-k07ke747882gpr926dn05qjeitlhmstg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.projects.enzoftware.firebasemlkit",
+            "certificate_hash": "5ec1706d3985fc3538bfa011f51ea8c18a56495a"
+          }
+        },
+        {
+          "client_id": "610041799365-egm45lbc7022qk3f1sdscribqtcuj24c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ7shCEeM1MoVrMyJlln0UjmxU8B2rt9s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610041799365-egm45lbc7022qk3f1sdscribqtcuj24c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
