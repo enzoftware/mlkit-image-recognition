@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Firebase ML Kit</string>
+    <string name="denied_permission">Este permiso es necesario para poder continuar</string>
 </resources>
