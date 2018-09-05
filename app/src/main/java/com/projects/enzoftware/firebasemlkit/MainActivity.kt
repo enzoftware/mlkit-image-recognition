@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity(), PermissionListener {
 
     }
 
+    override fun onNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
     private fun takePicture() {
         val photo = fotoapparat.takePicture()
         photo   .toBitmap()
