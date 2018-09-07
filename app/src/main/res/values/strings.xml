@@ -3,4 +3,5 @@
     <string name="denied_permission">Este permiso es necesario para poder continuar</string>
     <string name="confidence">CONFIDENCE %</string>
     <string name="image_name">IMAGE_NAME</string>
+    <string name="operation_dont_success">No se pudo realizar la operacion</string>
 </resources>

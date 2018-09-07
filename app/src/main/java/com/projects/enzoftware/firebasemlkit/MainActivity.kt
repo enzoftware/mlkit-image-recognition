@@ -10,6 +10,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import com.projects.enzoftware.firebasemlkit.model.ImageLabel
 import com.projects.enzoftware.firebasemlkit.utils.doImageRecognition
 import io.fotoapparat.Fotoapparat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -39,8 +40,14 @@ class MainActivity : AppCompatActivity(), PermissionListener {
         val photo = fotoapparat.takePicture()
         photo   .toBitmap()
                 .whenAvailable {
-                    doImageRecognition(it!!.bitmap)
+                    val labels_list = doImageRecognition(it!!.bitmap, this)
+
                 }
+    }
+
+    private fun navigateToListImageResults(labels: List<ImageLabel>) {
+        val intent = ListLabelsActivity.callingIntent(this, ArrayList(labels))
+        startActivity(intent)
     }
 
     override fun onPermissionGranted(response: PermissionGrantedResponse?) {
