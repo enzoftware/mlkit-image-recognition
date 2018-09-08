@@ -4,6 +4,7 @@
   
   ## Firebase ML Kit - Image Recognition
   
+  ![result](art/mlkitgif.gif)
   
 </div>
 
