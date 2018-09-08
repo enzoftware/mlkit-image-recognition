@@ -2,11 +2,11 @@ package com.projects.enzoftware.firebasemlkit
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcelable
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import com.google.android.gms.vision.label.ImageLabel
+import com.projects.enzoftware.firebasemlkit.adapter.ImageLabelAdapter
+import com.projects.enzoftware.firebasemlkit.model.ImageLabel
 import kotlinx.android.synthetic.main.activity_list_labels.*
 
 class ListLabelsActivity : AppCompatActivity() {

@@ -1,9 +1,13 @@
 package com.projects.enzoftware.firebasemlkit
 
 import android.Manifest
+import android.content.Context
+import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.firebase.ml.vision.FirebaseVision
+import com.google.firebase.ml.vision.common.FirebaseVisionImage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -40,7 +44,20 @@ class MainActivity : AppCompatActivity(), PermissionListener {
         val photo = fotoapparat.takePicture()
         photo   .toBitmap()
                 .whenAvailable {
-                    val labels_list = doImageRecognition(it!!.bitmap, this)
+                    doImageRecognition(it!!.bitmap)
+                }
+    }
+
+    fun doImageRecognition(bitmap: Bitmap){
+        val image = FirebaseVisionImage.fromBitmap(bitmap)
+        val detector = FirebaseVision.getInstance().visionLabelDetector
+        detector.detectInImage(image)
+                .addOnSuccessListener { it ->
+                    val labels = it.map { ImageLabel(it.label, it.confidence) }.toList()
+                    navigateToListImageResults(labels)
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, this.getString(R.string.operation_dont_success), Toast.LENGTH_SHORT).show()
 
                 }
     }
