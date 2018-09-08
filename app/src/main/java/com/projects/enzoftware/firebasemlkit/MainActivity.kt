@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), PermissionListener {
                 }
     }
 
-    fun doImageRecognition(bitmap: Bitmap){
+    private fun doImageRecognition(bitmap: Bitmap){
         val image = FirebaseVisionImage.fromBitmap(bitmap)
         val detector = FirebaseVision.getInstance().visionLabelDetector
         detector.detectInImage(image)
